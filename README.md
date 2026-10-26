@@ -4,13 +4,21 @@ This project is intended for use in conjunction with the week 08 material for MO
 
 **To Use**
 
-1. Create a new CodeSpace from the GitHub repository.
-2. Install the Java extension.
-3. Import the Java Project.
-2. In a terminal run the databases setup script.  This may take a bit of time and there are some sleeps to ensure the services start before the databases are added.
+1. Create a new CodeSpace from the GitHub repository.  
+    ![Create new codespace](.images/createCosdespace.png)
+
+2. Install the Java extension. 
+    ![Install Java](.images/InstallJavaExtension.png)
+
+3. Import the Java Project.  
+    ![Import Java Project](.images/ImportJavaProject.png)
+
+4. In a terminal run the databases setup script.  This may take a bit of time and there are some sleeps to ensure the services start before the databases are added.
 
     ```bash
     bash .setupScripts/setupdatabases.sh
     ```
-3. Run the Java Project ```DBExample```
-4. Run the project
+
+5. Run the Java Project ```DBExample```. 
+    ![Run the Java Project](.images/RunProject.png)
+    
