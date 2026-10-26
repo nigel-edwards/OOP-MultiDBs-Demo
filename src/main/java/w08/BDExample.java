@@ -34,9 +34,9 @@ public class BDExample {
 
         BDExample db = new BDExample();
 
-        String[] urls = {"jdbc:sqlite:Chinook_Sqlite.sqlite", "jdbc:mysql://localhost:3306/chinook", "jdbc:postgresql://localhost/chinook" };
-        String[] usernames = { null, "reader", "postgres"};
-        String[] passwords = { null, "mysql", "R0semar1e"};
+        String[] urls = {"jdbc:sqlite:Chinook_Sqlite.sqlite", "jdbc:mysql://localhost:3306/Chinook", "jdbc:postgresql://localhost/chinook" };
+        String[] usernames = { null, "root", "postgres"};
+        String[] passwords = { null, "rootpassword", "admin"};
 
         for (int i = 0; i < urls.length; i++) {
             System.out.println("\n######################################################################################################");
@@ -45,11 +45,12 @@ public class BDExample {
             try {
                 db.connect(urls[i], usernames[i], passwords[i]);
 
-                ResultSet rs = db.executeQuery("SELECT * FROM album;");
+                ResultSet rs = db.executeQuery("SELECT * FROM Album;");
                 while (rs.next()) {
-                    int id = rs.getInt("AlbumId");
-                    String title = rs.getString("Title");
-                    int artistId = rs.getInt("ArtistID");
+                    // Note there are some differences in the column names so used column idexes here
+                    int id = rs.getInt(1);
+                    String title = rs.getString(2);
+                    int artistId = rs.getInt(3);
                     System.out.println(id + ", " + title + ", " + artistId);
                 }
 
